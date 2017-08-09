@@ -1,0 +1,18 @@
+body {
+        font-family: "Actor";
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+.page-heading {
+        font-size: 3em;
+        margin-bottom: 1em;
+        color: #888888;
+    }
+.section-heading {
+        font-size: 2em;
+        margin-bottom: 1em;
+        color: #888888;
+    }
+    P {
+        margin-bottom: 1em;
+    }

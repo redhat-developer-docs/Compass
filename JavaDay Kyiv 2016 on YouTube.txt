@@ -1,0 +1,34 @@
+JavaDay Kyiv 2016 on YouTube
+
+Microprofile - Non profit organization to make a tiny Java runtime; to inform the JCP
+
+Self-Service, On-Demand, Elastic, Infrastructure as Code (Cloud) --> Re-Org to DevOps --> Automation: Puppet, Chef, Ansible and/or Containers --> CI & CD Deployment Pipeline --> One Microservice --> Silicon Valley DotCom Startup (Unicorn)
+
+How long does it take to provision a new VM?
+
+Jez Humble: If a build breaks, how long to fix? All HANDS ON DECK -- Never more then 10 minutes
+
+How do you go faster than three weeks? Microservices!
+
+1/3 good, 1/3 bad, 1/3 neutral
+
+Attributes of Microservice:
+---------------------------
+Deployment Independence
+Organized around business capabilities
+A microservice is a product
+Focus on API
+Smart endpoints and dumb pipes
+Decentralized Governance
+Decentralized Data Management
+Infrastructure as Code
+Design for failure
+Design will evolve
+
+Benefits of Microservices:
+--------------------------
+Dev --> Production is the same
+Change can happen faster
+Dev doesn't have to match Production
+Portable
+Automate all the things
