@@ -1,4 +1,3 @@
-# Compass
 Compass is an end-to-end architecture guide for building Cloud Native applications the Red Hat Way.
 
 It includes microservices running in Linux containers, Kubernetes, OpenShift, Ansible and many other technologies.  
@@ -73,12 +72,13 @@ One of the most notable characteristics of a microservice done right is the idea
 Implemented correctly, this concept of a small (tiny?) team will result in a fast-acting, cohesive unit with an entrepreneurial mindset. If this is not the case, you're doing it wrong.
 
 ### Domain Driven Design
-Domain Driven Design (DDD) is, in simple terms, the idea that a system design based on the underlying domain, i.e. the real-world "thing" being modeled. For example, an inventory control system is built over the inventory control domain. It does not concern itself with the sales system or the purchasing system. It does provide services that those and other systems can use, but they are not the concern of the inventory system per se. This design methodology results in distinct systems with fewer complexities. This idea of keeping things separated is known as a Bounded Context.
-
+**Domain Driven Design** (DDD) is, in simple terms, the idea that a system design based on the underlying domain, i.e. the real-world "thing" being modeled. For example, an inventory control system is built over the inventory control domain. It does not concern itself with the sales system or the purchasing system. It does provide services that those and other systems can use, but they are not the concern of the inventory system per se. This design methodology results in distinct systems with fewer complexities. This idea of keeping things separated is known as a **Bounded Context**.
 ### Bounded Context
-
+A bounded context might best be described as a natural partition, or boundary, within a domain. For example, in an inventory system, the process of automatic reordering of inventory is a natural boundary, or bounded context. This process does not need to know about the parts that relieve inventory, update inventory counts, or cost the inventory. It will *use* those other parts, those other *bounded contexts*, but it lives independently of them. The interaction of all of the bounded contexts is typically done by using events, and is described by a **Context Map**.
+### Context Map
+The Context Map describes the interactions between the bounded contexts. Events, data tranlations, points of contact, and data sharing are all described in the context map. This helps people understand the details of the system.
 ### Fault-resilient infrastructure
-### API Gateway
+The many parts of a cloud native system must rely on a fault-resilient infrastructure. These underpinnings allow such things as: automatic fault detection, routing away from slow or down services, and automatic service rebirthing. Further expanding this feature would include the ability to hot swap between different cloud providers, or the ability to spread services across multiple clouds. The ideal is not a cloud that never fails; rather, it is an infrastructure that responds to failures quickly and effortlessly.
 ### Promises
 ### Monitoring
 ### Tracing
