@@ -1,8 +1,10 @@
-Compass is an end-to-end architecture guide for building Cloud Native applications the Red Hat Way.
+# Compass
+## What is Compass?
+**Compass is an end-to-end architecture guide for building Cloud Native applications the Red Hat Way.**
 
 It includes microservices running in Linux containers, Kubernetes, OpenShift, Ansible and many other technologies.  
 
-There is associated code -- an online store -- to demonstrate the architecture.
+There is associated code -- Brewery (https://github.com/redhat-developer-demos/brewery) -- to demonstrate the architecture.
 
 The first version of the project will be written in Java. After that, subsequent versions will feature other languages: Node.js, Python, .NET (C#, F# and VB), Go, and another others that are relevant.
 
@@ -78,8 +80,9 @@ A bounded context might best be described as a natural partition, or boundary, w
 ### Context Map
 The Context Map describes the interactions between the bounded contexts. Events, data tranlations, points of contact, and data sharing are all described in the context map. This helps people understand the details of the system.
 ### Fault-resilient infrastructure
-The many parts of a cloud native system must rely on a fault-resilient infrastructure. These underpinnings allow such things as: automatic fault detection, routing away from slow or down services, and automatic service rebirthing. Further expanding this feature would include the ability to hot swap between different cloud providers, or the ability to spread services across multiple clouds. The ideal is not a cloud that never fails; rather, it is an infrastructure that responds to failures quickly and effortlessly.
+The many parts of a cloud native system must rely on a fault-resilient infrastructure. These underpinnings allow such things as: automatic fault detection, routing away from slow or down services, and automatic service rebirthing. Further expanding this feature would include the ability to hot swap between different cloud providers, or the ability to spread services across multiple clouds. The ideal is not a cloud that never fails; rather, it is an infrastructure that responds to failures quickly and effortlessly with minimal or -- better yet -- zero downtime.
 ### Promises
+
 ### Monitoring
 ### Tracing
 ### Logging
