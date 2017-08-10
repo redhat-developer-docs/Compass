@@ -82,9 +82,11 @@ The Context Map describes the interactions between the bounded contexts. Events,
 ### Fault-resilient infrastructure
 The many parts of a cloud native system must rely on a fault-resilient infrastructure. These underpinnings allow such things as: automatic fault detection, routing away from slow or down services, and automatic service rebirthing. Further expanding this feature would include the ability to hot swap between different cloud providers, or the ability to spread services across multiple clouds. The ideal is not a cloud that never fails; rather, it is an infrastructure that responds to failures quickly and effortlessly with minimal or -- better yet -- zero downtime.
 ### Promises
-
+Microservices give promises. That is, you follow the API to reach the microservice, and in turn it promises to deliver a certain prescribed result. The goal of any microservice should be to uphold that promise no matter the situation. For example, a microservice may use a Circuit Breaker Pattern in order to shortcut any faults and return a value. That value may be a default value, or it may be a value that was stored in a local cache, or a calculated value. The idea of a promise is that the microservice will return something of value instead of, say, an exception.
 ### Monitoring
+Monitoring is critical to the success of a cloud native computing system. Some of the things necessary to watch include: Performance, service births and deaths, traffic flow and routing, business responses (e.g. during A/B testing), and more.
 ### Tracing
+Tracing gives you the opportunity to get an overview of your system performance from a higher level. Microservice tracing assigns each request a unique identifier (called a "span") that accompanies a request from origin through the entire round trip back to the start. Timestamps along the way allow you to calculate latency and service completion time (i.e. how long did it take for microservice Foo to do its job); both important tools when monitoring performance, service discovery, and routing. 
 ### Logging
 ### Fault tolerance/acceptance
 ### Continuous Integration
