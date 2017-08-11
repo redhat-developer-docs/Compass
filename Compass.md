@@ -4,9 +4,9 @@
 
 It includes microservices running in Linux containers, Kubernetes, OpenShift, Ansible and many other technologies.  
 
-There is associated code -- Brewery (https://github.com/redhat-developer-demos/brewery) -- to demonstrate the architecture.
+There is an associated Reference Implementation (RI) -- Helloworld MSA -- to demonstrate the architecture.
 
-The first version of the project will be written in Java. After that, subsequent versions will feature other languages: Node.js, Python, .NET (C#, F# and VB), Go, and another others that are relevant.
+The first version of this RI will be written in Java. After that, subsequent versions will feature other languages: Node.js, Python, .NET (C#, F# and VB), Go, and another others that are relevant.
 
 ## Audience
 The target audience for this guide is software architects, developers, and C-level executives (CIO, CTO, etc). For architects, this site is a guide to understanding and designing Cloud Native systems. For developers, this site contains both explanations and working code. You won't be left with theories and edicts; you'll be given source code in your language. Finally, for the CIO and CTO audience, this site will give you an overview of some of the benefits and drawbacks of Cloud Native computing, thing necessary in order to decide if your organization should venture down this path.
@@ -96,8 +96,9 @@ Consider that things such as an overloaded server, a slow network connection, or
 
 A robust and well-conceived monitoring and tracing system is crucial to fault tolerance, as it allows the system to detect any problems.
 ### Continuous Integration
-"You should be able to go to production from your trunk at any time". This is one of the tenants of continuous integration. Developers should be checking in their work several times a day to the main trunk of an application, and it should be available for a successful build into production at any time. This may seem extreme, but it tends to develop a bias toward small, autonomous and independent microservices.
+"You should be able to go to production from your trunk at any time". This is one of the tenants of continuous integration. Developers should be checking in their work several times a day to the main trunk of an application, and it should be available for a successful build into production at any time. This may seem extreme, but it tends to develop a bias toward small, autonomous and independent microservices. Continuous Integration must be mastered before embracing **Continuous Delivery**.
 ### Continuous Delivery
+
 ### Service discovery
 ### Automation
 ### Scalability
@@ -113,7 +114,7 @@ Green field or legacy?
 ### Developing a new ("Green field") application
 #### Start with monolith or microservices?
 
-## Our Reference Implementation: Brewery
+## Our Reference Implementation: Helloworld MSA
 
 ## Sidecars
 
