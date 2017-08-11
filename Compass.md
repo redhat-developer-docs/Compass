@@ -98,12 +98,18 @@ A robust and well-conceived monitoring and tracing system is crucial to fault to
 ### Continuous Integration
 "You should be able to go to production from your trunk at any time". This is one of the tenants of Continuous Integration (CI). Developers should be checking in their work several times a day to the main trunk of an application, and it should be available for a successful build into production at any time. This may seem extreme, but it tends to develop a bias toward small, autonomous and independent microservices. Continuous Integration must be mastered before embracing **Continuous Delivery**.
 ### Continuous Delivery
-Continuous Delivery (CD) is the ability to push a new version to production at any time. A complete build, test and deploy pipeline must exist in order for this to be done automatically. The suggested delivery method is a manual step, i.e. "clicking a button" to delivery the bits. This human intervention is *not* necessary, in which case CD becomes Continuous Deployment. In either case, the pipeline is automated along the way: Testing, Staging, and Acceptance Tests. These are followed by Deployment (manual or automated) and post-deployment tests. Because of deployment techniques such as Blue-Green Deployment, deployment becomes less risky, as rolling back can be immediate. In some cases, most notably when a database schema change accompanies a deployment, rolling *forward* is the correct course is the case of a post-deployment test failure.
+Continuous Delivery (CD) is the ability to push a new version to production at any time. A complete build, test and deploy pipeline must exist in order for this to be done automatically. The suggested delivery method is a manual step, i.e. "clicking a button" to delivery the bits. This human intervention is *not* necessary, in which case CD becomes Continuous Deployment. In either case, the pipeline is automated along the way: Testing, Staging, and Acceptance Tests. These are followed by Deployment (manual or automated) and post-deployment tests. Because of deployment techniques such as Blue-Green Deployment, deployment becomes less risky, as rolling back can be immediate. In some cases, most notably when a database schema change accompanies a deployment, rolling *forward* is the correct course when a post-deployment test fails.
 ### Service discovery
+Service Discovery is, simply, how to locate a microservice. This can quickly become complicated when multiple instances of a microservice is running (i.e. scaling up), when a microservice is running at different locations (i.e. scaling out), or a new or multiple versions of the same service are running. A tool is necessary to track services and their associated address. This tool, a registry, is used by the caller to find the location of the service that best fits the call. Factors include: Which version of the service should I use? Which instance is available and fast?
+
+The service discovery registry can be client-based or server-based.
+
+#### -- insert diagrams of client-based and server-based registries -- ####
+
 ### Automation
-### Scalability
 ### Containers
 ### Load Balancing
+### Scalability
 ### DevOps structure/mentality
 ### Data
 
@@ -116,5 +122,6 @@ Green field or legacy?
 
 ## Our Reference Implementation: Helloworld MSA
 
-## Sidecars
+## Sidecars: What is a "Sidecar"
+### Example: istio
 
