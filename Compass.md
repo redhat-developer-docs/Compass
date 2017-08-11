@@ -88,8 +88,15 @@ Monitoring is critical to the success of a cloud native computing system. Some o
 ### Tracing
 Tracing gives you the opportunity to get an overview of your system performance from a higher level. Microservice tracing assigns each request a unique identifier (called a "span") that accompanies a request from origin through the entire round trip back to the start. Timestamps along the way allow you to calculate latency and service completion time (i.e. how long did it take for microservice Foo to do its job); both important tools when monitoring performance, service discovery, and routing. 
 ### Logging
+When monitoring and tracing applications, it is crucial that all logging is done to a central location. This enables a single overview (think "dashboard") of the entire system. The applications should not concern themselves with the location of their logs; the function should be unimportant to the app. Logs are a series of events, written in chronological sequence. Because of these constraints, logging should be provided by the platform (PaaS) and not a concern of the application developer.
 ### Fault tolerance/acceptance
+Servers fall over. Disks fill up. Cables get cut. Electricity goes out. In short: Things break. Knowing this means you must shift your thinking (and development) from a mindset of maximizing uptime to one of quickly responding to downtime or, more subtle, conditions of less-than-optimal performance.  
+
+Consider that things such as an overloaded server, a slow network connection, or a software defect may cause one or more microservice instances to be deemed unacceptable. A well-built cloud native system will handle this gracefully, ideally without any noticeable effects.
+
+A robust and well-conceived monitoring and tracing system is crucial to fault tolerance, as it allows the system to detect any problems.
 ### Continuous Integration
+"You should be able to go to production from your trunk at any time". This is one of the tenants of continuous integration. Developers should be checking in their work several times a day to the main trunk of an application, and it should be available for a successful build into production at any time. This may seem extreme, but it tends to develop a bias toward small, autonomous and independent microservices.
 ### Continuous Delivery
 ### Service discovery
 ### Automation
