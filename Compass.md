@@ -1,6 +1,6 @@
 # Compass
 ## What is Compass?
-**Compass is an end-to-end architecture guide for building Cloud Native applications the Red Hat Way.**
+**Compass is an end-to-end architecture guide and code experience that describes the opinionated Red Hat way for building Cloud Native applications.**
 
 It includes microservices running in Linux containers, Kubernetes, OpenShift, Ansible and many other technologies.  
 
@@ -31,6 +31,8 @@ Cloud Native computing is more than simply running an application on a VM that i
 >1. Containerized. Each part (applications, processes, etc) is packaged in its own container. This facilitates reproducibility, transparency, and resource isolation.
 >2. Dynamically orchestrated. Containers are actively scheduled and managed to optimize resource utilization.
 >3. Microservices oriented. Applications are segmented into microservices. This significantly increases oerall agility and maintainability of applications.
+>4. Portable. While not always necessary, the ability to port your system from one provider or infrastructure to another with little or no effort is a promise of cloud native computing. Moving applications must include the more difficult task of moving data; when using microservices, apps and data typically live together. Moving data is often the daunting challenge.
+>5. Performant. The expectation for a cloud native solution should be high performance. Fact is, this may be the summum bonum of cloud native computing. All of the other facets of this architecture are to achieve this end: speed. Speed includes not only application response time, but also includes the speed at which changes and defect fixes are made.
 
 
 ## Benefits of Cloud Native Computing
@@ -67,7 +69,9 @@ The tradeoffs include cost and customization, but the "as a Service" hierarchy a
 Hosting software and data in your on-premises servers, on a hosted solution, or a combination of the two, is a key advantage. The ability to locate computing and storage where you want it is an important benefit of cloud native computing. Security, speed, and even legal issues can be reasons that dictate where you store data and computing. In the best implementations of cloud native computing, not only can applications be moved between private and public servers, it can be moved between -- or spread across -- multiple hosting solutions. The ability to move from, say, Amazon Web Services to Azure, is one of the "holy grails" of cloud native computing.
 
 
-## The many parts of a microservice
+## The Microservice Ecosystem
+The environment in which microservices live and thrive includes advancements both technology and management. "Doing microservices" is not simply a matter of writing tiny programs that run in a container. Management must support a decentralized structure, where governance changes from decision-making to that of holding teams accountable. Traits such as trust, accountability, and autonomy are required by management; not a minor change for most organizations. What follows is a list of some of the characteristics of a cloud native system.
+
 ### Small teams
 One of the most notable characteristics of a microservice done right is the idea of a small team that owns the application. The "two pizza team" idea from Amazon depicts this idea: A team small enough to be fed with two pizzas. The team _owns_ a microservice, from design to coding to deployments, to support. The team size isn't really the issue here; it's about the team having autonomy and accountability. Autonomy to select their programming language and coding style and standards; accountabililty in that they are responsible for the success of the microservice.
 
@@ -107,11 +111,33 @@ The service discovery registry can be client-based or server-based.
 #### -- insert diagrams of client-based and server-based registries -- ####
 
 ### Automation
+Automation is, in fact, the starting point when moving to a cloud native architecture. The switch to a DevOps environment -- including not only tools, but mindset -- is critical to any level of success. This cannot be overstated. Everything must be automated and reproduceable. Snowflake servers, where everything was added and configured over time must be replaced with a commodity infrastructure. The goal is to be able to build and rebuild any environment with the push of a button -- or less. Deploying software becomes routine and simple instead of weekend tasks for the operations people.
+
+Automation is the key to a sound CI/CD configuration, and is where you start.
+
 ### Containers
+The underlying technology that enables cloud native computing is Linux containers. Containers allow you to quickly spin up a new instance of an application, typically within just a few seconds. Because of this, auto-scaling becomes more fine-grained, the system more responsive, and costs can be more easily controlled. Gone are the days of needing several minutes to provision a VM, install any dependencies -- hoping they're all the correct versions -- and then installing your application. With containers, you not only have near-instant access to more computing power, but you have an image that has remained unchanged from the time the developer built it. From development through testing and staging and into production, you are guaranteed that neither the application nor its supporting dependencies have changed.
 ### Load Balancing
+Load balancing goes hand-in-hand with service discovery, scheduling and auto scaling. In a load balancing setup, calls to services are to a URI that locates the load balancer. The load balancer then determines which instance of a service to use. You may have 200 instances of a service running across the internet -- a term known as clustering -- and the load balancer will handle the responsibility to choose the correct one. When services are born or die, the load balance keeps track. These features, combined with the right infrastructure software, allow you to do things such as zero-downtime deployments, or roll back after a deployment fails or has problems.
+
+#### -- Load Balancing Diagram Goes Here -- ####
+
 ### Scalability
-### DevOps structure/mentality
+By combining load balancing, monitoring, tracing, containers, automation, and the right infrastructure, scalability is made possible. In the past, scaling a system to handle a larger workload meant increasing the server's capacity by adding RAM, installing more and/or faster drives, or perhaps a faster network card. Code optimization became critical. This "scaling up" could take weeks.
+
+When virtualization became commonplace, scaling was often accomplished by adding additional VMs to your system. This is known as "scaling out". This took less time than a hardware upgrade, and weeks or days became minutes, but it still meant assigning an entire server for even the smallest application. While much faster than scaling up in your hardward, it was still problematic. Recreating a running server to be an _exact_ copy is rife with opportunities for failure. 
+
+Even VMs were not immune to the idea of adding hardware. One way of scaling when using VMs was to use faster servers to run virtualization. This meant changing your operations scripts or running code, for example, to select the proper (beefier) images.
+
+With containers, scaling a system can be done by very rapidly adding more instances of a service: scaling out. Because containers start in seconds, you can respond much more rapidly to demands. Because the image used contains the operating system, dependencies and your application, you can be sure that you are, in fact, replicating your running code with complete fidelity. This is the idea behind **Immutable Infrastructure**.
+
+### Immutable Infrastructure
+The idea of immutable infrastructure is that you never change your program's environment. The operating system is never updated. Newer dependencies are never installed. Your code is never changed.
+
+Instead, you build a _new_ image and that becomes your solution. By following this model, you can be assured that you won't unintentionally have multiple instances of the same application running in different environments.
+
 ### Data
+One of the goals of using microservices is that each service should have its own data. Having 200 microservices talking to a central database won't scale if the database can't.
 
 ## Where To Start?  
 Green field or legacy?
