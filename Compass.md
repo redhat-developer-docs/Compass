@@ -9,7 +9,7 @@ There is an associated Reference Implementation (RI) -- Helloworld MSA -- to dem
 The first version of this RI will be written in Java. After that, subsequent versions will feature other languages: Node.js, Python, .NET (C#, F# and VB), Go, and any others that are relevant.
 
 ## Audience
-The target audience for this guide is software architects, developers, and C-level executives (CIO, CTO, etc). For architects, this site is a guide to understanding and designing Cloud Native systems. For developers, this site contains both explanations and working code. You won't be left with theories and edicts; you'll be given source code in your language. Finally, for the CIO and CTO audience, this site will give you an overview of some of the benefits and drawbacks of Cloud Native computing, thing necessary in order to decide if your organization should venture down this path.
+You're a developer who wants to learn more about modern software development. You're not sure exactly how to do this, but you want to learn. Getting your organization to adopt newer techniques and techologies is what makes you tick, and you know this is the key to a better workplace. It may even improve your life. Moving faster, reducing the time it takes to create, deliver and maintain software is your goal. This document is for you.
 
 ## Why this guide?  
 Software development is no longer an isolated function. As cloud computing becomes ubiquitous and a commodity, and as systems and teams are becoming more frequently distributed, it becomes crucial that vendor and software selections not only work well, but that they work well together.  
