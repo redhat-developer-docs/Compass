@@ -1,5 +1,5 @@
-# Compass
-## What is Compass?
+# Project Compass
+## What is Project Compass?
 **Compass is an end-to-end architecture guide and code experience that describes the opinionated Red Hat way for building Cloud Native applications.**
 
 It includes microservices running in Linux containers, Kubernetes, OpenShift, Ansible and many other technologies.  
