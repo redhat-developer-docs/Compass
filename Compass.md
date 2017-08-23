@@ -23,7 +23,7 @@ This site has two distinct but related sections: The Architectural Blueprint and
 
 The first section (Architectural Blueprint) describes Red Hat opinionated approach to developing cloud native applications. In this section you will find descriptions and explanations for all things related to cloud native applications, including management considerations, technologies, business needs, etc. Some parts of the section will be language-neutral, while some topics may include language-specific instructions or technologies. Overall, the Architectural Blueprint is the How And Why of cloud native development the Red Hat way.
 
-The second section (Example Application) provides a life-like example of an application that is developed following the guidelines, technologies and disciplines established in the first section. The application, Coolstore, was developed by Red Hat specifically for this purpose, and highlights the best practices and leading technologies for cloud native development. This section is very language-specific; Java is the supported language at this time, with examples coming for Python, Go, Node.js, and the .NET languages (C#, F#, and VB).
+The second section (Example Application) provides a life-like example of an application that is developed following the guidelines, technologies and disciplines established in the first section. The application, Coolstore, was developed by Red Hat specifically for this purpose, and highlights the best practices and leading technologies for cloud native development. This section is very language-specific; Java is the supported programming language at this time, with examples coming for Node.js, Python, Go, and the .NET languages (C#, F#, and VB).
 
 ## What is Cloud Native Computing?
 ### Definition
