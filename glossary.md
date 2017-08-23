@@ -2,6 +2,7 @@ Gloassary
 ====
 
 * [2-Pizza Team](www.example.com)
+* [3Scale](www.example.com)
 * [A/B Test](www.example.com)
 * [Adapter Containers](www.example.com)
 * [Ambassador Containers](www.example.com)
@@ -15,6 +16,7 @@ Gloassary
 * [Circuit Breaker](www.example.com)
 * [Compensating Transactions](www.example.com)
 * [Configuration](www.example.com)
+* [ConfigMap](www.example.com)
 * [Consistency Models](www.example.com)
 * [Container/Virutal Appliance](www.example.com)
 * [CQRS](www.example.com)
@@ -32,6 +34,7 @@ Gloassary
 * [Health Checking](www.example.com)
 * [Ingress](www.example.com)
 * [Lead Time](www.example.com)
+* [Let's Encrypt](www.example.com)
 * [Log Aggregation](www.example.com)
 * [Metrics](www.example.com)
 * [Monitoring](www.example.com)
