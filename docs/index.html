@@ -1,53 +1,103 @@
-<html lang="en">
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Actor" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-    <div class="page-heading">Compass: The Red Hat Architectural Guide To Building Cloud Native Software</div>
-    <div class="section-heading">Why This Guide?</div>
-<p>Software development is no longer an isolated function. As cloud computing because ubiquitous and commodicized, and as systems and teams are becoming more frequently distributed, it becomes crucial that vendor and software selections not only work well, but that they work well together.</p>
-<p>Understanding this, Red Hat has put together this web site in order to help developers down the past of both least resistance and greatest value toward software success.  </p>
-<p>Embracing open source as more than software --  but rather as a culture -- means this guide is an ongoing effort and subject to changes, improvement and additions as merited.  </p>
-<p>The Red Hat way of development in centered around the concept of "cloud computing", and is not limited to any one language. While the programming languages used in this guide are limited (Java for now; node, Go, Python and C# later), the concepts are not. Any developer of any language discipline can profit from this site.</p>
-        <div class="section-heading">
-            Cloud Native: A Definition
-        </div>
-        <div class="section-heading">
-            Microservice Ecosystem
-        </div>
-        <div class="section-heading">
-            Defining the Mission Critical Microservice
-        </div>
-        <div class="section-heading">
-            Where To Start?
-        </div>
-        <div class="section-heading">
-            Introducing Our Example: Coolstore
-        </div>
-        <div class="section-heading">
-            Building the Inventory Service
-        </div>
-        <div class="section-heading">
-            The Web UI
-        </div>
-        <div class="section-heading">
-            The API Gateway
-        </div>
-        <div class="section-heading">
-            Testing: From Web to Gateway to Service
-        </div>
-        <div class="section-heading">
-            Adding Services Using Ansible
-        </div>
-        <div class="section-heading">
-            Monitoring The System
-        </div>
-        <div class="section-heading">
-            Update Scenarios
-        </div>
-        
-        
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="project-compass">Project Compass</h1>
+<h2 id="what-is-project-compass">What is Project Compass?</h2>
+<p><strong>Compass is an end-to-end architecture guide and code experience that describes the opinionated Red Hat way for building Cloud Native applications.</strong></p>
+<p>It includes microservices running in Linux containers, Kubernetes, OpenShift, Ansible and many other technologies.</p>
+<p>There is an associated Reference Implementation (RI) – Helloworld MSA – to demonstrate the architecture.</p>
+<p>The first version of this RI will be written in Java. After that, subsequent versions will feature other languages: Node.js, Python, .NET (C#, F# and VB), Go, and any others that are relevant.</p>
+<h2 id="audience">Audience</h2>
+<p>You’re a developer who wants to learn more about modern software development. You’re not sure exactly how to do this, but you want to learn. Getting your organization to adopt newer techniques and techologies is what makes you tick, and you know this is the key to a better workplace. It may even improve your life. Moving faster, reducing the time it takes to create, deliver and maintain software is your goal. This document is for you.</p>
+<h2 id="why-this-guide">Why this guide?</h2>
+<p>Software development is no longer an isolated function. As cloud computing becomes ubiquitous and a commodity, and as systems and teams are becoming more frequently distributed, it becomes crucial that vendor and software selections not only work well, but that they work well together.</p>
+<p>Understanding this, Red Hat has put together this web site in order to help developers down the path of both least resistance and greatest value toward cloud native software success.</p>
+<p>The Red Hat way of development is centered around the concept of cloud computing, and is not limited to any one programming language. While the languages used in this guide are limited (Java for now; node, Go, Python and C# later), the concepts are not. Any developer of any language discipline can profit from this site.</p>
+<h2 id="how-this-site-is-organized">How This Site Is Organized</h2>
+<p>This site has two distinct but related sections: The Architectural Blueprint and the Example Application.</p>
+<p>The first section (Architectural Blueprint) describes Red Hat opinionated approach to developing cloud native applications. In this section you will find descriptions and explanations for all things related to cloud native applications, including management considerations, technologies, business needs, etc. Some parts of the section will be language-neutral, while some topics may include language-specific instructions or technologies. Overall, the Architectural Blueprint is the How And Why of cloud native development the Red Hat way.</p>
+<p>The second section (Example Application) provides a life-like example of an application that is developed following the guidelines, technologies and disciplines established in the first section. The application, Coolstore, was developed by Red Hat specifically for this purpose, and highlights the best practices and leading technologies for cloud native development. This section is very language-specific; Java is the supported programming language at this time, with examples coming for Node.js, Python, Go, and the .NET languages (C#, F#, and VB).</p>
+<h2 id="what-is-cloud-native-computing">What is Cloud Native Computing?</h2>
+<h3 id="definition">Definition</h3>
+<p>Cloud Native computing is more than simply running an application on a VM that is hosted off premises. The Cloud Native Computing Foundation describes it thusly: &gt;Cloud native computing uses an open source stack to be: &gt;1. Containerized. Each part (applications, processes, etc) is packaged in its own container. This facilitates reproducibility, transparency, and resource isolation. &gt;2. Dynamically orchestrated. Containers are actively scheduled and managed to optimize resource utilization. &gt;3. Microservices oriented. Applications are segmented into microservices. This significantly increases oerall agility and maintainability of applications. &gt;4. Portable. While not always necessary, the ability to port your system from one provider or infrastructure to another with little or no effort is a promise of cloud native computing. Moving applications must include the more difficult task of moving data; when using microservices, apps and data typically live together. Moving data is often the daunting challenge. &gt;5. Performant. The expectation for a cloud native solution should be high performance. Fact is, this may be the summum bonum of cloud native computing. All of the other facets of this architecture are to achieve this end: speed. Speed includes not only application response time, but also includes the speed at which changes and defect fixes are made.</p>
+<h3 id="some-key-distinctions-of-cloud-native-computing">Some Key Distinctions of Cloud Native Computing</h3>
+<h4 id="using-____-as-a-service">Using ____ as a Service</h4>
+<p>Infrastructure, Platform, Software, Database … these (and more) “as a Service” offerings are all a part of Cloud Native Computing. The benefit of this is that you can select which level of completeness you wish; what starting point suits your needs, desires, or budget.</p>
+<p>Infrastructure will provide virtual machines (VMs) and networking. Platform provides an operating environment on top of the infrastructure (e.g. OpenShift). Software is a product that you use, such as Basecamp.</p>
+<p>The tradeoffs include cost and customization, but the “as a Service” hierarchy allows you to select your starting point based on your needs.</p>
+<h4 id="public-private-and-hybrid-clouds">Public, Private, and Hybrid Clouds</h4>
+<p>Hosting software and data in your on-premises servers, on a hosted solution, or a combination of the two, is a key advantage. The ability to locate computing and storage where you want it is an important benefit of cloud native computing. Security, speed, and even legal issues can be reasons that dictate where you store data and computing. In the best implementations of cloud native computing, not only can applications be moved between private and public servers, it can be moved between – or spread across – multiple hosting solutions. The ability to move from, say, Amazon Web Services to Azure, is one of the “holy grails” of cloud native computing.</p>
+<h2 id="benefits-of-cloud-native-computing">Benefits of Cloud Native Computing</h2>
+<p>Like any change in the software development landscape, cloud native has both plusses and negatives. Having knowledge of these characteristics can help avoid surprises and disappointments while at the same time helping one position their organization to reap the most benefits from cloud native. Some of the benefits of cloud native computing include:</p>
+<h3 id="lower-cost">Lower Cost</h3>
+<p>Cloud native computing can yield cost savings in many ways. - Simply switching to an open source development model will mean a reduction or elimination of software licensing costs. - Small microservices mean no more support tickets, eliminating an entire system and the associated administrative costs.</p>
+<h3 id="speed-to-deployment">Speed to deployment</h3>
+<ul>
+<li>Small, simple and easy-to-understand microservices, with promises but no coupling, can quickly be changed and deployed.</li>
+<li>Automated (scripted) pipelines reduce human interaction and make things faster.</li>
+<li>Managed and automated deployments mean you can introduce new code with no downtime and much less risk. These two characterists combine to create a confidence and atmosphere where speed is welcomed and not feared.</li>
+</ul>
+<h3 id="global-scale-e.g.cdns">Global scale (e.g. CDNs)</h3>
+<p>Software that operates on a global scale, or even if merely a continent-sized scale (e.g. it is an online store that operates in the United States), cloud computing benefits by making resources closer to their use, reducing latency. Software running at multiple data centers and Content Delivery Networks (CDNs) allow intelligent routers to find the fastest response, which is most frequently the closest hardware. In those situations where the closest hardware is not the fastest, intelligent routing can find the next fastest solution. Distributed hardware means a better chance of finding the fastest solution.</p>
+<h3 id="reliability">Reliability</h3>
+<p>Systems fail. Networks are fragile. In fact, the eight fallacies of distributed computing lists network unreliability as number one. So how why is reliability a benefit?</p>
+<p>Because we can anticipate and plan for the unreliable parts: networks, latency, and bandwidth. In the last 1980s, when midrange computers ruled the enterprise, the idea was to make hardware that wouldn’t fail. When hardware became a commodity in the late 1990s, it ushered in an era of <em>expecting</em> and <em>responding to</em> failure.</p>
+<p>Now, when networks or systems fail, we can quickly detect the event act on it by redirecting traffic, provisioning new VMs or containers, and creating software that provides a service despite being “broken”. Monitoring, tracing, auto-scaling, circuit breakers; these technologies (and more) work together to make an unreliable network appear reliable.</p>
+<h2 id="the-microservice-ecosystem">The Microservice Ecosystem</h2>
+<p>The environment in which microservices live and thrive includes advancements both technology and management. “Doing microservices” is not simply a matter of writing tiny programs that run in a container. Management must support a decentralized structure, where governance changes from decision-making to that of holding teams accountable. Traits such as trust, accountability, and autonomy are required by management; not a minor change for most organizations. What follows is a list of some of the characteristics of a cloud native system.</p>
+<h3 id="small-teams">Small Teams</h3>
+<p>One of the most notable characteristics of a microservice done right is the idea of a small team that owns the application. The “two pizza team” idea from Amazon depicts this idea: A team small enough to be fed with two pizzas. The team <em>owns</em> a microservice, from design to coding to deployments, to support. The team size isn’t really the issue here; it’s about the team having autonomy and accountability. Autonomy to select their programming language and coding style and standards; accountabililty in that they are responsible for the success of the microservice.</p>
+<p>Implemented correctly, this concept of a small (tiny?) team will result in a fast-acting, cohesive unit with an entrepreneurial mindset. If this is not the case, you’re doing it wrong.</p>
+<h3 id="domain-driven-design">Domain Driven Design</h3>
+<p><strong>Domain Driven Design</strong> (DDD) is, in simple terms, the idea that a system design based on the underlying domain, i.e. the real-world “thing” being modeled. For example, an inventory control system is built over the inventory control domain. It does not concern itself with the sales system or the purchasing system. It does provide services that those and other systems can use, but they are not the concern of the inventory system per se. This design methodology results in distinct systems with fewer complexities. This idea of keeping things separated is known as a <strong>Bounded Context</strong>. ### Bounded Context A bounded context might best be described as a natural partition, or boundary, within a domain. For example, in an inventory system, the process of automatic reordering of inventory is a natural boundary, or bounded context. This process does not need to know about the parts that relieve inventory, update inventory counts, or cost the inventory. It will <em>use</em> those other parts, those other <em>bounded contexts</em>, but it lives independently of them. The interaction of all of the bounded contexts is typically done by using events, and is described by a <strong>Context Map</strong>. ### Context Map The Context Map describes the interactions between the bounded contexts. Events, data tranlations, points of contact, and data sharing are all described in the context map. This helps people understand the details of the system. ### Fault-resilient Infrastructure The many parts of a cloud native system must rely on a fault-resilient infrastructure. These underpinnings allow such things as: automatic fault detection, routing away from slow or down services, and automatic service rebirthing. Further expanding this feature would include the ability to hot swap between different cloud providers, or the ability to spread services across multiple clouds. The ideal is not a cloud that never fails; rather, it is an infrastructure that responds to failures quickly and effortlessly with minimal or – better yet – zero downtime. ### Promises Microservices give promises. That is, you follow the API to reach the microservice, and in turn it promises to deliver a certain prescribed result. The goal of any microservice should be to uphold that promise no matter the situation. For example, a microservice may use a Circuit Breaker Pattern in order to shortcut any faults and return a value. That value may be a default value, or it may be a value that was stored in a local cache, or a calculated value. The idea of a promise is that the microservice will return something of value instead of, say, an exception. ### Monitoring Monitoring is critical to the success of a cloud native computing system. Some of the things necessary to watch include: Performance, service births and deaths, traffic flow and routing, business responses (e.g. during A/B testing), and more. ### Tracing Tracing gives you the opportunity to get an overview of your system performance from a higher level. Microservice tracing assigns each request a unique identifier (called a “span”) that accompanies a request from origin through the entire round trip back to the start. Timestamps along the way allow you to calculate latency and service completion time (i.e. how long did it take for microservice Foo to do its job); both important tools when monitoring performance, service discovery, and routing. ### Logging When monitoring and tracing applications, it is crucial that all logging is done to a central location. This enables a single overview (think “dashboard”) of the entire system. The applications should not concern themselves with the location of their logs; the function should be unimportant to the app. Logs are a series of events, written in chronological sequence. Because of these constraints, logging should be provided by the platform (PaaS) and not a concern of the application developer. ### Fault Tolerance/Acceptance Servers fall over. Disks fill up. Cables get cut. Electricity goes out. In short: Things break. Knowing this means you must shift your thinking (and development) from a mindset of maximizing uptime to one of quickly responding to downtime or, more subtle, conditions of less-than-optimal performance.</p>
+<p>Consider that things such as an overloaded server, a slow network connection, or a software defect may cause one or more microservice instances to be deemed unacceptable. A well-built cloud native system will handle this gracefully, ideally without any noticeable effects.</p>
+<p>A robust and well-conceived monitoring and tracing system is crucial to fault tolerance, as it allows the system to detect any problems. ### Continuous Integration “You should be able to go to production from your trunk at any time”. This is one of the tenants of Continuous Integration (CI). Developers should be checking in their work several times a day to the main trunk of an application, and it should be available for a successful build into production at any time. This may seem extreme, but it tends to develop a bias toward small, autonomous and independent microservices. Continuous Integration must be mastered before embracing <strong>Continuous Delivery</strong>. ### Continuous Delivery Continuous Delivery (CD) is the ability to push a new version to production at any time. A complete build, test and deploy pipeline must exist in order for this to be done automatically. The suggested delivery method is a manual step, i.e. “clicking a button” to delivery the bits. This human intervention is <em>not</em> necessary, in which case CD becomes Continuous Deployment. In either case, the pipeline is automated along the way: Testing, Staging, and Acceptance Tests. These are followed by Deployment (manual or automated) and post-deployment tests. Because of deployment techniques such as Blue-Green Deployment, deployment becomes less risky, as rolling back can be immediate. In some cases, most notably when a database schema change accompanies a deployment, rolling <em>forward</em> is the correct course when a post-deployment test fails. ### Service Discovery Service Discovery is, simply, how to locate a microservice. This can quickly become complicated when multiple instances of a microservice is running (i.e. scaling up), when a microservice is running at different locations (i.e. scaling out), or a new or multiple versions of the same service are running. A tool is necessary to track services and their associated address. This tool, a registry, is used by the caller to find the location of the service that best fits the call. Factors include: Which version of the service should I use? Which instance is available and fast?</p>
+<p>The service discovery registry can be client-based or server-based.</p>
+<h4 id="insert-diagrams-of-client-based-and-server-based-registries">– insert diagrams of client-based and server-based registries –</h4>
+<h3 id="automation">Automation</h3>
+<p>Automation is, in fact, the starting point when moving to a cloud native architecture. The switch to a DevOps environment – including not only tools, but mindset – is critical to any level of success. This cannot be overstated. Everything must be automated and reproduceable. Snowflake servers, where everything was added and configured over time must be replaced with a commodity infrastructure. The goal is to be able to build and rebuild any environment with the push of a button – or less. Deploying software becomes routine and simple instead of weekend tasks for the operations people.</p>
+<p>Automation is the key to a sound CI/CD configuration, and is where you start.</p>
+<h3 id="containers">Containers</h3>
+<p>The underlying technology that enables cloud native computing is Linux containers. Containers allow you to quickly spin up a new instance of an application, typically within just a few seconds. Because of this, auto-scaling becomes more fine-grained, the system more responsive, and costs can be more easily controlled. Gone are the days of needing several minutes to provision a VM, install any dependencies – hoping they’re all the correct versions – and then installing your application. With containers, you not only have near-instant access to more computing power, but you have an image that has remained unchanged from the time the developer built it. From development through testing and staging and into production, you are guaranteed that neither the application nor its supporting dependencies have changed. ### Load Balancing Load balancing goes hand-in-hand with service discovery, scheduling and auto scaling. In a load balancing setup, calls to services are to a URI that locates the load balancer. The load balancer then determines which instance of a service to use. You may have 200 instances of a service running across the internet – a term known as clustering – and the load balancer will handle the responsibility to choose the correct one. When services are born or die, the load balance keeps track. These features, combined with the right infrastructure software, allow you to do things such as zero-downtime deployments, or roll back after a deployment fails or has problems.</p>
+<h4 id="load-balancing-diagram-goes-here">– Load Balancing Diagram Goes Here –</h4>
+<h3 id="scalability">Scalability</h3>
+<p>By combining load balancing, monitoring, tracing, containers, automation, and the right infrastructure, scalability is made possible. In the past, scaling a system to handle a larger workload meant increasing the server’s capacity by adding RAM, installing more and/or faster drives, or perhaps a faster network card. Code optimization became critical. This “scaling up” could take weeks.</p>
+<p>When virtualization became commonplace, scaling was often accomplished by adding additional VMs to your system. This is known as “scaling out”. This took less time than a hardware upgrade, and weeks or days became minutes, but it still meant assigning an entire server for even the smallest application. While much faster than scaling up in your hardward, it was still problematic. Recreating a running server to be an <em>exact</em> copy is rife with opportunities for failure.</p>
+<p>Even VMs were not immune to the idea of adding hardware. One way of scaling when using VMs was to use faster servers to run virtualization. This meant changing your operations scripts or running code, for example, to select the proper (beefier) images.</p>
+<p>With containers, scaling a system can be done by very rapidly adding more instances of a service: scaling out. Because containers start in seconds, you can respond much more rapidly to demands. Because the image used contains the operating system, dependencies and your application, you can be sure that you are, in fact, replicating your running code with complete fidelity. This is the idea behind <strong>Immutable Infrastructure</strong>.</p>
+<h3 id="immutable-infrastructure">Immutable Infrastructure</h3>
+<p>The idea of immutable infrastructure is that you never change your program’s environment. The operating system is never updated. Newer dependencies are never installed. Your code is never changed.</p>
+<p>Instead, you build a <em>new</em> image and that becomes your solution. By following this model, you can be assured that you won’t unintentionally have multiple instances of the same application running in different environments.</p>
+<h3 id="data">Data</h3>
+<p>One of the goals of using microservices is that each service should have its own data. Having 200 microservices talking to a central database won’t scale if the database can’t.</p>
+<h2 id="where-to-start">Where To Start?</h2>
+<h3 id="green-field-or-legacy">Green field or legacy?</h3>
+<h4 id="add-to-a-legacy-system-aka-the-strangler-pattern">Add to a legacy system, AKA the “Strangler” pattern</h4>
+<h5 id="how-to-migrate-existing-monolith">How to migrate existing Monolith</h5>
+<h4 id="develop-new">Develop New</h4>
+<h5 id="start-with-monolith-or-msa">Start with Monolith or MSA?</h5>
+<h3 id="domain-driven-design-1">Domain Driven Design</h3>
+<h3 id="finding-boundaries-bounded-context">Finding boundaries: Bounded Context</h3>
+<h3 id="about-promises">About “Promises”</h3>
+<h3 id="platform-from-msa-i.e.openshift">Platform from MSA (i.e. OpenShift)</h3>
+<h2 id="introducing-our-reference-implementation-helloworld-msa">Introducing Our Reference Implementation: Helloworld MSA</h2>
+<h3 id="the-parts">The Parts</h3>
+<h3 id="creating-hola">Creating Hola</h3>
+<h3 id="creating-aloha">Creating Aloha</h3>
+<h3 id="creating-ola">Creating Ola</h3>
+<h3 id="creating-bonjour">Creating Bonjour</h3>
+<h3 id="creating-the-api-gateway">Creating the API Gateway</h3>
+<h3 id="creating-the-front-end">Creating the Front End</h3>
+<h3 id="building-the-cicd-pipeline">Building the CI/CD Pipeline</h3>
 </body>
 </html>
