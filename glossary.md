@@ -1,7 +1,7 @@
 Glossary
 ====
 
-* [2-Pizza Team](www.example.com)
+* [2-Pizza Team](2pizzateam.html)
 * [3Scale](www.example.com)
 * [A/B Test](www.example.com)
 * [Adapter Containers](www.example.com)
