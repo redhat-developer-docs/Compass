@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="theme.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 # Project Compass
 ## What is Project Compass?
 **Compass is an end-to-end architecture guide and code experience that describes the opinionated Red Hat way for building Cloud Native applications.**
