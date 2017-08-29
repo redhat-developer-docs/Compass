@@ -1,0 +1,2 @@
+##API Gateway  
+A microservice design model where a client (e.g. a web site) talks to one and only one microservice -- the API Gateway. The API Gateway, in turn, handles all traffic to the other microservices and then back to the calling client.
