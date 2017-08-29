@@ -2,3 +2,4 @@ sudo: enabled
 before_install:
   - sudo apt-get install pandoc -y
 script: pandoc ./Compass.md -f markdown -t html -s -o docs/index.html
+script: pandoc ./glossary.md -f markdown -t html -s -o docs/glossary.html

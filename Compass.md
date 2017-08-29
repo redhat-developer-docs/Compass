@@ -8,6 +8,9 @@ There is an associated Reference Implementation (RI) -- Helloworld MSA -- to dem
 
 The first version of this RI will be written in Java. After that, subsequent versions will feature other languages: Node.js, Python, .NET (C#, F# and VB), Go, and any others that are relevant.
 
+## Not sure?
+There's a glossary <a href="https://donschenck.github.io/Compass/glossary.html">here</a>.
+
 ## Audience
 You're a developer who wants to learn more about modern software development. You're not sure exactly how to do this, but you want to learn. Getting your organization to adopt newer techniques and techologies is what makes you tick, and you know this is the key to a better workplace. It may even improve your life. Moving faster, reducing the time it takes to create, deliver and maintain software is your goal. This document is for you.
 
