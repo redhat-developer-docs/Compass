@@ -1,4 +1,4 @@
 sudo: enabled
-apt addons:
+before_install:
   - apt-get install pandoc -y
-pandoc ./Compass.md -f markdown -t html -s -o docs/index.html
+script: pandoc ./Compass.md -f markdown -t html -s -o docs/index.html
