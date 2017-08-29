@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="theme.css">
 Glossary
 ====
 
