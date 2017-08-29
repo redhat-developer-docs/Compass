@@ -19,8 +19,8 @@ Glossary
 * [Container/Virtual Appliance](containervirtualappliance.html)  
 * [CQRS](cqrs.html)  
 * [Cycle Time](cycletime.html)  
-* [Data Virtualization](datavirtualization.html) A logical semantic layer on top of your data store(s) - Ramesh Reddy  
 * [Dark Launch](arklaunch.html)  
+* [Data Virtualization](datavirtualization.html) A logical semantic layer on top of your data store(s) - Ramesh Reddy  
 * [DevOps](devops.html)  
 * [Discovery](discovery.html)  
 * [Elasticity](elasticity.html)  

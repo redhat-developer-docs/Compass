@@ -4,7 +4,7 @@ sudo: enabled
 before_install:
   - sudo apt-get install pandoc -y
 
-script: bash ./deploy.sh
+script: bash ./compile.sh
 env:
   global:
   - ENCRYPTION_LABEL: "<.... encryption label from previous step ....>"
