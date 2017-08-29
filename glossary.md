@@ -1,4 +1,4 @@
-Gloassary
+Glossary
 ====
 
 * [2-Pizza Team](www.example.com)
@@ -18,9 +18,10 @@ Gloassary
 * [Configuration](www.example.com)
 * [ConfigMap](www.example.com)
 * [Consistency Models](www.example.com)
-* [Container/Virutal Appliance](www.example.com)
+* [Container/Virtual Appliance](www.example.com)
 * [CQRS](www.example.com)
 * [Cycle Time](www.example.com)
+* [Data Virtualization](www.example.com) A logical semantic layer on top of your data store(s) - Ramesh Reddy
 * [Dark Launch](www.example.com)
 * [DevOps](www.example.com)
 * [Discovery](www.example.com)
@@ -41,6 +42,7 @@ Gloassary
 * [Monitoring](www.example.com)
 * [Monolith](www.example.com)
 * [Node Proxy](www.example.com)
+* [Outlier](www.example.com)
 * [Orchestration](www.example.com)
 * [Pipeline](www.example.com)
 * [Rate Limiter](www.example.com)
