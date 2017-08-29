@@ -1,5 +1,12 @@
+language: generic # don't install any environment
+
 sudo: enabled
 before_install:
   - sudo apt-get install pandoc -y
-script: pandoc ./Compass.md -f markdown -t html -s -o docs/index.html
-script: pandoc ./glossary.md -f markdown -t html -s -o docs/glossary.html
+
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "<.... encryption label from previous step ....>"
+  - COMMIT_AUTHOR_EMAIL: "don.schenck@gmail.com"
+  
