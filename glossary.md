@@ -1,11 +1,8 @@
-<link rel="stylesheet" type="text/css" href="style.css">
 Glossary
-====
-
 * [2-Pizza Team](2pizzateam.html)
-* [3Scale](www.example.com)
-* [A/B Test](www.example.com)
-* [Adapter Containers](www.example.com)
+* [3Scale](3scale.html)
+* [A/B Test](abtest.html)
+* [Adapter Containers](adaptercontainers.html)
 * [Ambassador Containers](www.example.com)
 * [API](www.example.com)
 * [Api Gateway](www.example.com)
