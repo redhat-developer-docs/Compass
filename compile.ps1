@@ -27,6 +27,7 @@ pandoc ./elasticity.md                -f markdown -t html -s -o docs/elasticity.
 pandoc ./eventsourcing.md             -f markdown -t html -s -o docs/eventsourcing.html
 pandoc ./eventualconsistency.md       -f markdown -t html -s -o docs/eventualconsistency.html
 pandoc ./faultinjection.md            -f markdown -t html -s -o docs/faultinjection.html
+pandoc ./faulttolerance.md            -f markdown -t html -s -o docs/faulttolerance.html
 pandoc ./featuretoggles.md            -f markdown -t html -s -o docs/featuretoggles.html
 pandoc ./glossary.md                  -f markdown -t html -s -o docs/glossary.html
 pandoc ./governance.md                -f markdown -t html -s -o docs/governance.html
