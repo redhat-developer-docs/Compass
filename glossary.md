@@ -1,7 +1,7 @@
-Glossary
+Glossary  
 * [2-Pizza Team](2pizzateam.html)   
-* [3Scale](3scale.html)
-* [A/B Test](abtest.html)  
+* [3Scale](3scale.html)  
+* [A/B Test](abtest.html)   
 * [Adapter Containers](adaptercontainers.html)  
 * [Ambassador Containers](ambassadorcontainers.html)  
 * [API](api.html)  
