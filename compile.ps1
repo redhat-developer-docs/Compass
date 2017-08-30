@@ -28,6 +28,7 @@ pandoc ./eventsourcing.md             -f markdown -t html -s -o docs/eventsourci
 pandoc ./eventualconsistency.md       -f markdown -t html -s -o docs/eventualconsistency.html
 pandoc ./faultinjection.md            -f markdown -t html -s -o docs/faultinjection.html
 pandoc ./featuretoggles.md            -f markdown -t html -s -o docs/featuretoggles.html
+pandoc ./glossary.md                  -f markdown -t html -s -o docs/glossary.html
 pandoc ./governance.md                -f markdown -t html -s -o docs/governance.html
 pandoc ./haproxy.md                   -f markdown -t html -s -o docs/haproxy.html
 pandoc ./healthchecking.md            -f markdown -t html -s -o docs/healthchecking.html
