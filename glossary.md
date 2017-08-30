@@ -32,6 +32,7 @@ Glossary
 * [Governance](governance.html)  
 * [HAProxy](haproxy.html)  
 * [Health Checking](healthchecking.html)  
+* [Immutable Infrastructure](immutableinfrastructure.html)
 * [Ingress](ingress.html)  
 * [Lead Time](leadtime.html)  
 * [Let's Encrypt](letsencrypt.html)  
